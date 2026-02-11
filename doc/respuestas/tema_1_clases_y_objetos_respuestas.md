@@ -17,32 +17,61 @@ Por favor, escribe en impersonal las respuestas.
 
 1. ¿Cuáles son las cuatro características básicas de la programación orientada a objetos? Describe brevemente cada una
 
+-Preclase:
 Encapsulación: agrupa datos y comportamiento y controla el acceso a los detalles internos.
 Abstracción: modela lo esencial y oculta complejidad innecesaria.
 Herencia: permite crear clases nuevas reutilizando y extendiendo otras existentes.
-Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.*/
+Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.
+
+-Postclase: 
+Encapsulación: agrupa datos y comportamiento y controla el acceso a los detalles internos.
+Abstracción: modela lo esencial y oculta complejidad innecesaria.
+Herencia: permite crear clases nuevas reutilizando y extendiendo otras existentes.
+Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.
+Composición: construir un objeto usando otros objetos dentro, en vez de heredar de una clase base.
 
 
 2. Cita cuatro lenguajes populares que permitan la programación orientada a objetos
 
-Java, C#, C++, Python.
+-Preclase: Java, C#, C++, Python.
+-Postclase: Dinámicos: Python, JavaScript. Compilados: C++, Java, C#, ¿Rust?.
 
 
 ## 3. Los paradigmas anteriores a la POO, ¿Qué es la **programación estructurada**? y, todavía mejor, ¿Qué es la **programación modular**?
 
+-Preclase: 
 Estructurada: organiza el programa usando secuencia, selección e iteración, evitando saltos descontrolados, y apoyándose en funciones/procedimientos y bloques.
 Modular: divide el software en módulos con responsabilidades claras e interfaces definidas para facilitar reutilización y mantenimiento.
 
+-Postclase:
+Ensamblador -> Estructurada o procedural o imperativa -> Modular.
+Ensamblador: Sólo tenemos la secuencia y un salto arbitrario(GOTO)(puedes poner que salte tu código a cualquier línea posterior o anterior).
+Estructurada: Nos da instrucciones de control modernas (condicional (if)) y (iterativas(until, for, do while)), sin GOTO.
+Modular: Se introducen librerías, paquetes, módulos... Agrupan código para facilitar su uso por otros programas o módilos.
+
+
 ## 4. ¿Qué tres elementos definen a un objeto en programación orientada a objetos?
 
+-Preclase:
 Identidad, estado (valores de atributos), comportamiento (métodos/operaciones).
+
+-Postclase:
+Identidad: es la dirección de memoria.
+Estado: valor de los atributos que tenga un objeto en un determinado momento, (lo que en struct eran campos).
+Comportamiento: métodos, son las funciones que todos los atributos de esa clase pueden hacer.
 
 ## 5. ¿Qué es una clase? ¿Es lo mismo que un objeto? ¿Qué es una instancia? ¿Todos los lenguajes orientados a objetos manejan el concepto de clase?
 
+-Preclase:
 Clase: plantilla que define atributos y métodos.
 Objeto: entidad concreta creada a partir de una clase.
 Instancia: objeto visto como “ejemplar” de una clase.
 No todos los lenguajes POO se basan estrictamente en clases; algunos son prototípicos (aunque puedan tener sintaxis tipo clase).
+
+-Postclase:
+Clase: molde para crear instancias durante la ejecución, define la estructura de estado(atributos) y el comportamiento(métodos).
+Objeto: son las variables de tipo de (alguna clase) con un estado concreto de sus atributos.
+
 
 
 ## 6. ¿Dónde se almacenan en memoria los objetos? ¿Es igual en todos los lenguajes? ¿Qué es la **recolección de basura**? 
@@ -54,13 +83,45 @@ Recolección de basura (garbage collection): mecanismo automático que detecta o
 
 ## 7. ¿Qué es un método? ¿Qué es la **sobrecarga de métodos**? 
 
+-Preclase:
 Método: función asociada a una clase/objeto que define comportamiento.
 Sobrecarga: mismo nombre de método con distintas listas de parámetros (número y/o tipos), resuelta en compilación.
 
+Postclase: 
+Método: función asociada a una clase/objeto que define comportamiento.
+Sobrecarga: mismo nombre de método con distintas listas de parámetros (número y/o tipos), resuelta en compilación.
 
 ## 8. Ejemplo mínimo de clase en Java, que se llame Punto, con dos atributos, x e y, con un método que se llame `calculaDistanciaAOrigen`, que calcule la distancia a la posición 0,0. Por sencillez, los atributos deben tener visibilidad por defecto. Crea además un ejemplo de uso con una instancia y uso del método
 
+-Preclase:
 Una clase llamada Punto con dos atributos x e y (visibilidad por defecto) y un método calculaDistanciaAOrigen que devuelve la distancia desde (x,y) hasta (0,0) usando la fórmula de la distancia euclídea. Además, se crea una instancia y se llama a ese método.
+
+-Postclase:
+
+Una clase llamada Punto con dos atributos x e y (visibilidad por defecto) y un método calculaDistanciaAOrigen que devuelve la distancia desde (x,y) hasta (0,0) usando la fórmula de la distancia euclídea. Además, se crea una instancia y se llama a ese método.
+
+public class Main {
+    public static void main(String[] args) {
+        Punto p = new Punto(3, 4);
+        System.out.println("Distancia al origen: " + p.calculaDistanciaAOrigen());
+    }
+}
+
+class Punto {
+    // visibilidad por defecto (package-private)
+    double x;
+    double y;
+
+    Punto(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    double calculaDistanciaAOrigen() {
+        return Math.sqrt(x * x + y * y);
+    }
+}
+
 
 
 ## 9. ¿Cuál es el punto de entrada en un programa en Java? ¿Qué es `static` y para qué vale? ¿Sólo se emplea para ese método `main`? ¿Para qué se combina con `final`?
