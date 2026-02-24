@@ -13,17 +13,11 @@ Por favor, escribe en impersonal las respuestas.
 ----
 -->
 
-<!-- TEMA 1. Clases y objetos
+<!--
+TEMA 1. Clases y objetos
 
 1. ¿Cuáles son las cuatro características básicas de la programación orientada a objetos? Describe brevemente cada una
 
--Preclase:
-Encapsulación: agrupa datos y comportamiento y controla el acceso a los detalles internos.
-Abstracción: modela lo esencial y oculta complejidad innecesaria.
-Herencia: permite crear clases nuevas reutilizando y extendiendo otras existentes.
-Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.
-
--Postclase: 
 Encapsulación: La encapsulación es la idea de que un objeto guarda sus datos por dentro y tú solo puedes interactuar con ellos a través de una interfaz controlada. (normalmente, métodos como getters y setters).
 Abstracción: Modelar únicamente las características esenciales de una entidad y exponer una interfaz de uso (métodos) ocultando los detalles de implementación.
 Herencia: Herencia permite crear clases especializadas a partir de una clase más general, reutilizando código y facilitando la extensión mediante extends y el override.
@@ -33,18 +27,11 @@ Composición: Construir un objeto usando otros objetos dentro, en vez de heredar
 
 2. Cita cuatro lenguajes populares que permitan la programación orientada a objetos
 
--Preclase: Java, C#, C++, Python.
-
--Postclase: Dinámicos: Python, JavaScript. Compilados: C++, Java, C#, ¿Rust?.
+Dinámicos: Python, JavaScript. Compilados: C++, Java, C#, ¿Rust?.
 
 
 ## 3. Los paradigmas anteriores a la POO, ¿Qué es la **programación estructurada**? y, todavía mejor, ¿Qué es la **programación modular**?
 
--Preclase: 
-Estructurada: organiza el programa usando secuencia, selección e iteración, evitando saltos descontrolados, y apoyándose en funciones/procedimientos y bloques.
-Modular: divide el software en módulos con responsabilidades claras e interfaces definidas para facilitar reutilización y mantenimiento.
-
--Postclase:
 Ensamblador -> Estructurada o procedural o imperativa -> Modular.
 
 Ensamblador: Sólo tenemos la secuencia y un salto arbitrario(GOTO)(puedes poner que salte tu código a cualquier línea posterior o anterior).
@@ -56,10 +43,6 @@ Modular: Organiza el software en módulos reutilizables con interfaces, mejora m
 
 ## 4. ¿Qué tres elementos definen a un objeto en programación orientada a objetos?
 
--Preclase:
-Identidad, estado (valores de atributos), comportamiento (métodos/operaciones).
-
--Postclase:
 Identidad: Es la dirección de memoria.
 
 Estado: Valor de los atributos que tenga un objeto en un determinado momento, (lo que en struct eran campos).
@@ -69,13 +52,6 @@ Comportamiento: Métodos, son las funciones que todos los atributos de esa clase
 
 ## 5. ¿Qué es una clase? ¿Es lo mismo que un objeto? ¿Qué es una instancia? ¿Todos los lenguajes orientados a objetos manejan el concepto de clase?
 
--Preclase:
-Clase: plantilla que define atributos y métodos.
-Objeto: entidad concreta creada a partir de una clase.
-Instancia: objeto visto como “ejemplar” de una clase.
-No todos los lenguajes POO se basan estrictamente en clases; algunos son prototípicos (aunque puedan tener sintaxis tipo clase).
-
--Postclase:
 Clase: “Molde/plantilla” que define estado (atributos) y comportamiento (métodos).
 
 Objeto: Son las variables de tipo de (alguna clase) con un estado concreto de sus atributos. (La entidad concreta).
@@ -85,12 +61,6 @@ Instancia: Objeto de una clase. En Java, “objeto” e “instancia” se usan 
 
 ## 6. ¿Dónde se almacenan en memoria los objetos? ¿Es igual en todos los lenguajes? ¿Qué es la **recolección de basura**? 
 
--Preclase
-Depende del lenguaje y del entorno de ejecución: a menudo los objetos viven en el heap, pero algunos lenguajes permiten objetos en stack o gestionados de otras formas.
-No es igual en todos.
-Recolección de basura (garbage collection): mecanismo automático que detecta objetos ya inaccesibles y recupera su memoria.
-
--Postclase
 En Java, los objetos (lo que creas con new) se guardan en el heap. En el stack van las variables locales y las referencias a esos objetos.
 No es igual en todos los lenguajes: en C/C++ puedes tener objetos en stack o heap y normalmente se libera memoria a mano.
 Recolección de basura (GC): sistema automático que detecta objetos ya inaccesibles (sin referencias) y libera su memoria.
@@ -98,22 +68,12 @@ Recolección de basura (GC): sistema automático que detecta objetos ya inaccesi
 
 ## 7. ¿Qué es un método? ¿Qué es la **sobrecarga de métodos**? 
 
--Preclase:
-Método: función asociada a una clase/objeto que define comportamiento.
-Sobrecarga: mismo nombre de método con distintas listas de parámetros (número y/o tipos), resuelta en compilación.
-
-Postclase: 
 Método: función definida dentro de una clase que describe una operación/comportamiento; puede actuar sobre el estado del objeto (sus atributos).
 
 Sobrecarga (overloading): varios métodos con el mismo nombre en la misma clase, pero con firma distinta (distinto número, tipo u orden de parámetros). Se decide en compilación.
 
 
 ## 8. Ejemplo mínimo de clase en Java, que se llame Punto, con dos atributos, x e y, con un método que se llame `calculaDistanciaAOrigen`, que calcule la distancia a la posición 0,0. Por sencillez, los atributos deben tener visibilidad por defecto. Crea además un ejemplo de uso con una instancia y uso del método
-
--Preclase:
-Una clase llamada Punto con dos atributos x e y (visibilidad por defecto) y un método calculaDistanciaAOrigen que devuelve la distancia desde (x,y) hasta (0,0) usando la fórmula de la distancia euclídea. Además, se crea una instancia y se llama a ese método.
-
--Postclase:
 
 public class Main {
     public static void main(String[] args) {
@@ -140,14 +100,8 @@ class Punto {
 
 ## 9. ¿Cuál es el punto de entrada en un programa en Java? ¿Qué es `static` y para qué vale? ¿Sólo se emplea para ese método `main`? ¿Para qué se combina con `final`?
 
--Preclase:
-El punto de entrada es el método main.
-static indica que pertenece a la clase, no a una instancia, y permite usarlo sin crear objetos. No se usa solo en main; también en métodos y atributos “de clase”.
-static final se usa típicamente para constantes: valor fijo, compartido por toda la clase.
-
--Postclase:
 El punto de entrada es el método:
-public static void main(String[] args).
+public static void main(String[] args) ya que es el primer método que la Java Virtual Machine busca y ejecuta cuando arrancas un programa en Java.
 ¿Qué es static y para qué vale?
 
 static significa que pertenece a la clase, no a un objeto (no necesitas new para usarlo).
@@ -165,56 +119,119 @@ static final se usa para constantes de clase (un valor único para todos y que n
 
 ## 10. Intenta ejecutar un poco de Java de forma básica, con los comandos `javac` y `java`. ¿Cómo podemos compilar el programa y ejecutarlo desde linea de comandos? ¿Java es compilado? ¿Qué es la **máquina virtual**? ¿Qué es el *byte-code* y los ficheros `.class`?
 
--Preclase
-Se compila desde consola con el compilador de Java y se ejecuta con el lanzador de Java.
-Java es compilado a bytecode, no directamente a código máquina.
-La JVM (máquina virtual) ejecuta ese bytecode (interpretándolo y/o compilándolo en caliente).
-Los ficheros .class contienen el bytecode resultante de la compilación.
+Para compilar se usa javac sobre el .java, y se genera un fichero .class. Para ejecutar, se usa java indicando el nombre de la clase sin el .class.
 
--Postclase
+Java es compilado pero no a código máquina directamente: se compila a bytecode, que es un "código intermedio" pensado para ejecutarse en cualquier sistema.
 
+La máquina virtual (JVM) es el programa que corre en tu ordenador y que ejecuta ese bytecode(lo interpreta y muchas veces lo transforma en código máquina mientras lo ejecuta).
+
+El bytecode es lo que va dentro de los .class: el resultado de compilar el .java y lo que entiende la JVM.
 
 ## 11. En el código anterior de la clase `Punto` ¿Qué es `new`? ¿Qué es un **constructor**? Pon un ejemplo de constructor en una clase `Empleado` que tenga DNI, nombre y apellidos
 
 new crea un objeto (reserva memoria) y llama a su constructor.
-Un constructor es una rutina especial de inicialización que se ejecuta al crear el objeto, normalmente para dejarlo en un estado válido.
+
+Constructor: método especial sin tipo de retorno y con el mismo nombre que la clase, para inicializar el objeto.
+
 La clase Empleado tendría atributos DNI, nombre y apellidos, y un constructor que reciba esos valores y los asigne al objeto.
+
+Ejemplo:
+
+class Empleado {
+    private String dni;
+    private String nombre;
+    private String apellidos;
+
+    public Empleado(String dni, String nombre, String apellidos) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+    }
+}
 
 
 ## 12. ¿Qué es la referencia `this`? ¿Se llama igual en todos los lenguajes? Pon un ejemplo del uso de `this` en la clase `Punto`
 
-this es la referencia al objeto actual (la instancia sobre la que se invoca el método).
+this es la referencia al objeto actual (la instancia) y se usa para acceder a sus atributos y métodos, especialmente para diferenciar atributos del objeto (this.x) de parámetros o variables locales (x).
+
 No se llama igual en todos los lenguajes (por ejemplo, en Python suele ser self).
+
 En Punto se usa para diferenciar atributos del objeto frente a parámetros o variables locales con el mismo nombre.
 
+class Punto {
+    private int x;
+    private int y;
 
-## 13. Añade ahora otro nuevo método que se llame `distanciaA`, que reciba un `Punto` como parámetro y calcule la distancia entre `this` y el punto proporcionado
+    public Punto(int x, int y) {
+        this.x = x;   // this.x es el atributo, x es el parámetro
+        this.y = y;
+    }
+}
 
-Añadir un método distanciaA que reciba un Punto y calcule la distancia euclídea entre el punto actual (this) y el punto recibido, usando diferencias en x e y y la raíz cuadrada.
+
+## 13. Añade ahora otro nuevo método que se llame `distanciaA`, que reciba un `Punto` como parámetro y calcule la distancia entre `this` y el punto proporcionado.
+
+public double distanciaA(Punto otro) {
+    double dx = this.x - otro.x;
+    double dy = this.y - otro.y;
+    return Math.sqrt(dx * dx + dy * dy);
+}
 
 
 ## 14. El paso del `Punto` como parámetro a un método, es **por copia** o **por referencia**, es decir, si se cambia el valor de algún atributo del punto pasado como parámetro, dichos cambios afectan al objeto fuera del método? ¿Qué ocurre si en vez de un `Punto`, se recibiese un entero (`int`) y dicho entero se modificase dentro de la función? 
 
-En Java el paso es por valor: siempre se copia el valor del argumento.
-Para objetos, lo que se copia es la referencia: modificar atributos del objeto dentro del método afecta al mismo objeto fuera del método, pero reasignar la referencia dentro no cambia la referencia externa.
-Para int (primitivo), se copia el valor numérico: modificarlo dentro del método no afecta al valor fuera.
+En Java el paso de parámetros es por valor siempre: en objetos se copia la referencia, por lo que modificar atributos dentro del método afecta al mismo objeto fuera; sin embargo, reasignar la referencia dentro del método no cambia la referencia externa. Si se quiere evitar modificar el objeto original, se trabaja con una copia.
+
+Para primitivos(int, float, double y etc), se copia el valor numérico: modificarlo dentro del método no afecta al valor fuera.
 
 
 ## 15. ¿Qué es el método `toString()` en Java? ¿Existe en otros lenguajes? Pon un ejemplo de `toString()` en la clase `Punto` en Java
 
-toString() devuelve una representación en texto del objeto y puede sobrescribirse para mostrar información útil.
-Existe concepto equivalente en muchos lenguajes (métodos especiales de conversión a cadena)
+toString() devuelve una representación en texto del objeto y puede sobrescribirse para mostrar información útil(ya hay una básica, pero nosotros la reescribimos para personalizarla y mostrar información útil).
+
+Pones @Override para indicar que estás sobrescribiendo un método que ya existe en la superclase (Object), como toString().
+
+Existe concepto equivalente en muchos lenguajes (métodos especiales de conversión a cadena).
+
+Ejemplo:
+
+class Punto {
+    private int x, y;
+
+    public Punto(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "Punto(" + x + ", " + y + ")";
+    }
+}
 
 
 ## 16. Reflexiona: ¿una clase es como un `struct` en C? ¿Qué le falta al `struct` para ser como una clase y las variables de ese tipo ser instancias?
 
-
 Un struct en C agrupa datos, pero no integra de forma nativa comportamiento asociado (métodos), encapsulación/visibilidad y mecanismos POO (como polimorfismo).
-Una clase combina datos + operaciones y suele ofrecer control de acceso y otras herramientas del paradigma.
+
+Una clase reúne datos (atributos) y comportamiento (métodos), y permite encapsular esos datos controlando el acceso (public/private).
+
 
 ## 17. Quitemos un poco de magia a todo esto: ¿Como se podría “emular”, con `struct` en C, la clase `Punto`, con su función para calcular la distancia al origen? ¿Qué ha pasado con `this`?
 
 Se emula definiendo un struct con x e y y una función que calcule la distancia al origen recibiendo como argumento la dirección del struct.
+
 this no existe implícitamente: se reemplaza por un parámetro explícito que identifica sobre qué “instancia” se opera.
+
+#include <math.h>
+
+typedef struct {
+    double x;
+    double y;
+} Punto;
+
+double distanciaAlOrigen(const Punto* p) {
+    return sqrt(p->x * p->x + p->y * p->y);
+}
 
 -->
