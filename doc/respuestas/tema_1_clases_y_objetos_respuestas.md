@@ -24,16 +24,17 @@ Herencia: permite crear clases nuevas reutilizando y extendiendo otras existente
 Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.
 
 -Postclase: 
-Encapsulación: agrupa datos y comportamiento y controla el acceso a los detalles internos.
-Abstracción: modela lo esencial y oculta complejidad innecesaria.
-Herencia: permite crear clases nuevas reutilizando y extendiendo otras existentes.
-Polimorfismo: la misma operación puede comportarse de forma distinta según el tipo real del objeto.
-Composición: construir un objeto usando otros objetos dentro, en vez de heredar de una clase base.
+Encapsulación: La encapsulación es la idea de que un objeto guarda sus datos por dentro y tú solo puedes interactuar con ellos a través de una interfaz controlada. (normalmente, métodos como getters y setters).
+Abstracción: Modelar únicamente las características esenciales de una entidad y exponer una interfaz de uso (métodos) ocultando los detalles de implementación.
+Herencia: Herencia permite crear clases especializadas a partir de una clase más general, reutilizando código y facilitando la extensión mediante extends y el override.
+Polimorfismo: Diferentes clases relacionadas (por herencia/interfaz) pueden implementar el mismo método y, al invocarlo mediante una referencia común, se ejecuta la versión correspondiente al tipo real del objeto.
+Composición: Construir un objeto usando otros objetos dentro, en vez de heredar de una clase base.
 
 
 2. Cita cuatro lenguajes populares que permitan la programación orientada a objetos
 
 -Preclase: Java, C#, C++, Python.
+
 -Postclase: Dinámicos: Python, JavaScript. Compilados: C++, Java, C#, ¿Rust?.
 
 
@@ -45,9 +46,12 @@ Modular: divide el software en módulos con responsabilidades claras e interface
 
 -Postclase:
 Ensamblador -> Estructurada o procedural o imperativa -> Modular.
+
 Ensamblador: Sólo tenemos la secuencia y un salto arbitrario(GOTO)(puedes poner que salte tu código a cualquier línea posterior o anterior).
-Estructurada: Nos da instrucciones de control modernas (condicional (if)) y (iterativas(until, for, do while)), sin GOTO.
-Modular: Se introducen librerías, paquetes, módulos... Agrupan código para facilitar su uso por otros programas o módilos.
+
+Estructurada: Nos da instrucciones de control modernas (condicional (if)) y (iterativas(until, for, do while)), sin GOTO. (Mejora calidad).
+
+Modular: Organiza el software en módulos reutilizables con interfaces, mejora mantenimiento y escalabilidad.
 
 
 ## 4. ¿Qué tres elementos definen a un objeto en programación orientada a objetos?
@@ -56,9 +60,12 @@ Modular: Se introducen librerías, paquetes, módulos... Agrupan código para fa
 Identidad, estado (valores de atributos), comportamiento (métodos/operaciones).
 
 -Postclase:
-Identidad: es la dirección de memoria.
-Estado: valor de los atributos que tenga un objeto en un determinado momento, (lo que en struct eran campos).
-Comportamiento: métodos, son las funciones que todos los atributos de esa clase pueden hacer.
+Identidad: Es la dirección de memoria.
+
+Estado: Valor de los atributos que tenga un objeto en un determinado momento, (lo que en struct eran campos).
+
+Comportamiento: Métodos, son las funciones que todos los atributos de esa clase pueden hacer.
+
 
 ## 5. ¿Qué es una clase? ¿Es lo mismo que un objeto? ¿Qué es una instancia? ¿Todos los lenguajes orientados a objetos manejan el concepto de clase?
 
@@ -69,16 +76,24 @@ Instancia: objeto visto como “ejemplar” de una clase.
 No todos los lenguajes POO se basan estrictamente en clases; algunos son prototípicos (aunque puedan tener sintaxis tipo clase).
 
 -Postclase:
-Clase: molde para crear instancias durante la ejecución, define la estructura de estado(atributos) y el comportamiento(métodos).
-Objeto: son las variables de tipo de (alguna clase) con un estado concreto de sus atributos.
+Clase: “Molde/plantilla” que define estado (atributos) y comportamiento (métodos).
 
+Objeto: Son las variables de tipo de (alguna clase) con un estado concreto de sus atributos. (La entidad concreta).
+
+Instancia: Objeto de una clase. En Java, “objeto” e “instancia” se usan casi como sinónimos. Una instancia es justamente un objeto que existe en un momento de la ejecución.
 
 
 ## 6. ¿Dónde se almacenan en memoria los objetos? ¿Es igual en todos los lenguajes? ¿Qué es la **recolección de basura**? 
 
+-Preclase
 Depende del lenguaje y del entorno de ejecución: a menudo los objetos viven en el heap, pero algunos lenguajes permiten objetos en stack o gestionados de otras formas.
 No es igual en todos.
 Recolección de basura (garbage collection): mecanismo automático que detecta objetos ya inaccesibles y recupera su memoria.
+
+-Postclase
+En Java, los objetos (lo que creas con new) se guardan en el heap. En el stack van las variables locales y las referencias a esos objetos.
+No es igual en todos los lenguajes: en C/C++ puedes tener objetos en stack o heap y normalmente se libera memoria a mano.
+Recolección de basura (GC): sistema automático que detecta objetos ya inaccesibles (sin referencias) y libera su memoria.
 
 
 ## 7. ¿Qué es un método? ¿Qué es la **sobrecarga de métodos**? 
@@ -88,8 +103,10 @@ Método: función asociada a una clase/objeto que define comportamiento.
 Sobrecarga: mismo nombre de método con distintas listas de parámetros (número y/o tipos), resuelta en compilación.
 
 Postclase: 
-Método: función asociada a una clase/objeto que define comportamiento.
-Sobrecarga: mismo nombre de método con distintas listas de parámetros (número y/o tipos), resuelta en compilación.
+Método: función definida dentro de una clase que describe una operación/comportamiento; puede actuar sobre el estado del objeto (sus atributos).
+
+Sobrecarga (overloading): varios métodos con el mismo nombre en la misma clase, pero con firma distinta (distinto número, tipo u orden de parámetros). Se decide en compilación.
+
 
 ## 8. Ejemplo mínimo de clase en Java, que se llame Punto, con dos atributos, x e y, con un método que se llame `calculaDistanciaAOrigen`, que calcule la distancia a la posición 0,0. Por sencillez, los atributos deben tener visibilidad por defecto. Crea además un ejemplo de uso con una instancia y uso del método
 
@@ -97,8 +114,6 @@ Sobrecarga: mismo nombre de método con distintas listas de parámetros (número
 Una clase llamada Punto con dos atributos x e y (visibilidad por defecto) y un método calculaDistanciaAOrigen que devuelve la distancia desde (x,y) hasta (0,0) usando la fórmula de la distancia euclídea. Además, se crea una instancia y se llama a ese método.
 
 -Postclase:
-
-Una clase llamada Punto con dos atributos x e y (visibilidad por defecto) y un método calculaDistanciaAOrigen que devuelve la distancia desde (x,y) hasta (0,0) usando la fórmula de la distancia euclídea. Además, se crea una instancia y se llama a ese método.
 
 public class Main {
     public static void main(String[] args) {
@@ -123,19 +138,40 @@ class Punto {
 }
 
 
-
 ## 9. ¿Cuál es el punto de entrada en un programa en Java? ¿Qué es `static` y para qué vale? ¿Sólo se emplea para ese método `main`? ¿Para qué se combina con `final`?
 
+-Preclase:
 El punto de entrada es el método main.
 static indica que pertenece a la clase, no a una instancia, y permite usarlo sin crear objetos. No se usa solo en main; también en métodos y atributos “de clase”.
 static final se usa típicamente para constantes: valor fijo, compartido por toda la clase.
 
+-Postclase:
+El punto de entrada es el método:
+public static void main(String[] args).
+¿Qué es static y para qué vale?
+
+static significa que pertenece a la clase, no a un objeto (no necesitas new para usarlo).
+Se usa para:
+1.Métodos “de utilidad”.
+2.Atributos compartidos por todas las instancias.
+
+¿Solo se usa en main?
+No. Se usa en atributos, métodos, bloques estáticos y clases internas.
+
+¿Para qué se combina con final?
+final significa no modificable.
+static final se usa para constantes de clase (un valor único para todos y que no cambia).
+
+
 ## 10. Intenta ejecutar un poco de Java de forma básica, con los comandos `javac` y `java`. ¿Cómo podemos compilar el programa y ejecutarlo desde linea de comandos? ¿Java es compilado? ¿Qué es la **máquina virtual**? ¿Qué es el *byte-code* y los ficheros `.class`?
 
+-Preclase
 Se compila desde consola con el compilador de Java y se ejecuta con el lanzador de Java.
 Java es compilado a bytecode, no directamente a código máquina.
 La JVM (máquina virtual) ejecuta ese bytecode (interpretándolo y/o compilándolo en caliente).
 Los ficheros .class contienen el bytecode resultante de la compilación.
+
+-Postclase
 
 
 ## 11. En el código anterior de la clase `Punto` ¿Qué es `new`? ¿Qué es un **constructor**? Pon un ejemplo de constructor en una clase `Empleado` que tenga DNI, nombre y apellidos
